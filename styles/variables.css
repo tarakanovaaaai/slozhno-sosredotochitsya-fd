@@ -1,4 +1,15 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --text-decor-color: #FF0070;
+  --text-color: #FF0070;
+  --header-color: #DB00FF;
+  --paragraph-color: #000028;
+  --accent-color: #FF0070;
+  --section-text-color: #F1B2CE;
+  --button-hover: #FF007066;
+  --shadow-color: #FF0070;
+
+  --line-height: 23.4px;
+  --font-size: 18px;
+  --header-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --bg_image: url('../images/cover-image-dark.png');
+}

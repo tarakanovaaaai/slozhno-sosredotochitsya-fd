@@ -1,5 +1,425 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg_image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: start;
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  padding: 10px;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  inset-block-end: 24px;
+  inset-inline-start: 10px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+.decorated_element {
+  position: absolute;
+  inset-block-start: 11px;
+  inset-inline-end: 38px;
+  line-height: 25px;
+  font-size: var(--font-size);
+  color: var(--accent-color);
+}
+
+.decorated_element::after {
+  content:'';
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  inset-block-end: 9px;
+  inset-inline-start: 43px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  border-radius: 100%;
+  background: var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 62px;
+  font-size: var(--font-size);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: none;
+  inline-size: 70px;
+  color: var(--text-color);
+  padding-block: 2px;
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  border: 1px solid var(--button-hover);
+  outline: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  outline: none;
+  pointer-events: none;
+  border: 1px solid currentColor;
+}
+
+.title_text {
+  text-shadow: 4px 4px 0 var(--shadow-color);
+  font-weight: bold;
+  line-height: 0.83;
+  font-size: var(--header-size);
+  margin-block-end: 10px;
+  color: var(--header-color);
+}
+.paragraph__header {
+  font-size: var(--font-size);
+  font-weight: bold;
+  line-height: var(--line-height);
+  color: var(--paragraph-color);
+}
+
+.paragraph__header:first-of-type {
+  margin-block-start: 44px;
+}
+
+.title-decor {
+  background-color: var(--text-decor-color);
+}
+
+.main {
+  padding-block-start: 27px;
+  padding-inline: 10px;
+}
+
+.section_concentrate {
+  display: grid;
+  gap: 20px;
+  font-size: var(--font-size);
+}
+
+.section_title {
+  line-height: var(--line-height);
+  color: var(--accent-color);
+}
+
+.section_content {
+  display: grid;
+  gap: 10px;
+}
+
+.section_arguments {
+  line-height: var(--line-height);
+  color: var(--paragraph-color);
+  background-color: var(--text-decor-color);
+}
+
+.section_paragraphs {
+  line-height: var(--line-height);
+  font-weight: 400;
+  color: var(--section-text-color);
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--section-text-color);
+  text-shadow: none;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--section-text-color);
+}
+
+.section_attention {
+  display: grid;
+  gap: 20px;
+  font-size: var(--font-size);
+  padding-block-start: 50px;
+}
+
+.section_question {
+  display: grid;
+  gap: 20px;
+  font-size: var(--font-size);
+  padding-block-start: 49px;
+}
+
+.arguments {
+  font-weight: 400;
+}
+
+.section-image {
+  display: grid;
+  gap: 10px;
+  max-width: 100vw;
+  font-size: var(--font-size);
+  padding-block-start: 50px;
+}
+
+.images {
+  display: grid;
+  gap: 10px;
+  max-width: 100vw;
+}
+
+.images img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  margin-block-start: 40px;
+  padding-inline: 14px;
+}
+
+.title_footer {
+  align-self: center;
+  text-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-right: 20px;
+    padding-left: 0;
+    min-height: 1024px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 19px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 21px;
+    inset-inline-start: 20px;
+  }
+
+  .decorated_element {
+    inset-block-start: 21px;
+    inset-inline-end: 48px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 179px;
+  }
+
+  .title_text {
+    margin-block-end: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .paragraph__header {
+    margin-inline-start: 50vw;
+  }
+
+  .paragraph__header:first-of-type {
+    margin-block-start: 162px;
+  }
+
+  .main {
+    padding-block-start: 60px;
+    padding-inline: 19px;
+  }
+
+  .section_concentrate {
+    grid-template-columns: 236px 1fr;
+  }
+
+  .section_content {
+    grid-column: 2;
+  }
+
+  .container_multitasking {
+    grid-column: span 2;
+  }
+
+  .container_eats {
+    grid-column: span 2;
+  }
+
+  .container_gadgets {
+    grid-column: span 2;
+  }
+
+  .section_attention {
+    grid-template-rows: min-content 1fr;
+    padding-block-start: 80px;
+  }
+
+  .attention_title {
+    grid-column: span 2;
+    margin-inline-end: 80%;
+  }
+
+  .attention_content {
+    grid-column: span 2;
+  }
+
+  .section_question {
+    grid-template-columns: 236px 1fr;
+    padding-block-start: 80px;
+  }
+
+  .section_title {
+    grid-row: span 2;
+  }
+
+  .section-image {
+    padding-block-start: 79px;
+    gap: 20px;
+  }
+
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .images img:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .images img:nth-child(2) {
+    grid-row: span 2;
+  }
+
+  .images img:nth-child(3) {
+    grid-row: span 2;
+  }
+
+  .images img:nth-child(4) {
+    grid-column: 2;
+  }
+
+  .images img:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .images img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    min-height: 1024px;
+    margin-block-start: 59px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    min-height: 768px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: self-start;
+    margin-block-start: 6px;
+    margin-inline-start: 20px;
+  }
+
+  .header__theme-menu-list {
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  .paragraph__header:first-of-type {
+    margin-block-start: 114px;
+  }
+
+  .section_concentrate {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .section_attention {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .attention_title {
+    grid-row: 1;
+    margin-inline-end: 50%;
+  }
+
+  .section_arguments {
+    height: fit-content;
+  }
+
+  .container_multitasking {
+    grid-column: 1 / 2;
+    margin-block-end: 47px;
+  }
+
+  .container_eats {
+    grid-column: 2 / 3;
+    margin-block-end: 70px;
+  }
+
+  .container_gadgets {
+    grid-column: 3 / 4;
+  }
+
+  .section_question {
+    grid-template-columns: 315px 1fr;
+  }
+
+  .footer {
+    min-height: 768px;
+  }
 }
