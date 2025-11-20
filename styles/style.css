@@ -11,7 +11,6 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: start;
   position: relative;
-  height: 100vh;
   min-height: 668px;
   padding: 10px;
 }
@@ -32,7 +31,7 @@
 }
 
 .decorated-zone::after {
-  inset-block-end: 24px;
+  inset-block-end: 10px;
   inset-inline-start: 10px;
   border-block-end: 1px solid var(--accent-color);
   border-inline-start: 1px solid var(--accent-color);
@@ -106,7 +105,6 @@
   font-weight: bold;
   line-height: 0.83;
   font-size: var(--header-size);
-  margin-block-end: 10px;
   color: var(--header-color);
 }
 .paragraph__header {
@@ -117,7 +115,7 @@
 }
 
 .paragraph__header:first-of-type {
-  margin-block-start: 44px;
+  margin-block-start: 55px;
 }
 
 .title-decor {
@@ -125,7 +123,7 @@
 }
 
 .main {
-  padding-block-start: 27px;
+  padding-block-start: 40px;
   padding-inline: 10px;
 }
 
@@ -222,7 +220,7 @@
 .footer {
   display: grid;
   position: relative;
-  height: 100vh;
+  /*height: 100vh;*/
   min-height: 668px;
   margin-block-start: 40px;
   padding-inline: 14px;
