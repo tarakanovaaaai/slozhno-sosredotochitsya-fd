@@ -11,6 +11,7 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: start;
   position: relative;
+  max-height: 100vw;
   min-height: 668px;
   padding: 10px;
 }
@@ -220,7 +221,7 @@
 .footer {
   display: grid;
   position: relative;
-  /*height: 100vh;*/
+  max-height: 100vw;
   min-height: 668px;
   margin-block-start: 40px;
   padding-inline: 14px;
