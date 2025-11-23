@@ -298,11 +298,6 @@
     grid-template-columns: 1fr;
   }
 
-  .reasons-content {
-    row-gap: 10px;
-    align-items: start;
-  }
-
   .content-card {
     gap: 10px;
   }
