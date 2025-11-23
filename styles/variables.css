@@ -11,5 +11,6 @@
   --line-height: 23.4px;
   --font-size: 18px;
   --header-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --bg_image: url('../images/cover-image-dark.png');
+  --bg-image: url('../images/cover-image-dark.png');
+  --bg-color: #000028;
 }

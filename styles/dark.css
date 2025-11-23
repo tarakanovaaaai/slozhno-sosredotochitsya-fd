@@ -1,13 +1,14 @@
 :root.theme-dark {
-  --bg_image: url('../images/cover-image-dark.png');
-  --text-decor-color: #FF0070;
-  --text-color: #FF0070;
-  --header-color: #DB00FF;
+  --bg-image: url('../images/cover-image-dark.png');
+  --bg-color: #000028;
+  --text-decor-color: #ff0070;
+  --text-color: #ff0070;
+  --header-color: #db00ff;
   --paragraph-color: #000028;
-  --accent-color: #FF0070;
-  --section-text-color: #F1B2CE;
-  --button-hover: #FF007066;
-  --shadow-color: #FF0070;
+  --accent-color: #ff0070;
+  --section-text-color: #f1b2ce;
+  --button-hover: #ff007066;
+  --shadow-color: #ff0070;
 }
 
 .theme-dark .decorated_element {
