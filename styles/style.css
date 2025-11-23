@@ -114,11 +114,8 @@
   font-size: var(--font-size);
   font-weight: bold;
   line-height: var(--line-height);
-  color: var(--paragraph-color);
-}
-
-.paragraph__header {
   margin-block-start: 55px;
+  color: var(--paragraph-color);
 }
 
 .title-decor {
@@ -281,9 +278,6 @@
   .paragraph__header {
     justify-self: end;
     max-width: 364px;
-  }
-
-  .paragraph__header {
     margin-block-start: 162px;
   }
 
